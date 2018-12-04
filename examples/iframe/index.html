@@ -8,24 +8,23 @@
     <title>JavaScript Commlinks Iframe Example</title>
 
     <style>
-        .wrapper {
-            display: flex;
-            justify-content: center;
-        }
-
-        .wrapper > div {
-            width: 400px;
-            margin: 15px;
-        }
+        .wrapper { display: flex; justify-content: center; }
+        .wrapper > div { width: 400px; margin: 15px; }
+        .text-center { text-align: center; }
     </style>
 </head>
 <body>
+<h1 class="text-center">JavaScript Commlinks Iframe Demo</h1>
+<p class="text-center">Easy communication between window instances in JavaScript.</p>
+<p class="text-center"><a href="https://github.com/zsoltgyure/Commlinks">View on Github</a></p>
 <div class="wrapper">
     <div>
+        <p>Main Window</p>
         <button onclick="sendMessage()">Send to Iframe</button>
         <ul id="messages"></ul>
     </div>
     <div>
+        <p>Iframe</p>
         <iframe src="./iframe.html" frameborder="1" id="iframe" width="100%" height="300"></iframe>
     </div>
 </div>
