@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Commlinks Iframe Example</title>
+</head>
+<body>
+<button onclick="sendMessage()">Send to main window</button>
+<ul id="messages"></ul>
+
+<script src="../../src/Commlink.js"></script>
+
+<script>
+    // Create the Commlink instance
+    Commlinks.mainWindow = new Commlink(
+        window.parent
+    );
+
+    // Listen for "updateIframeList" message, and display the received message in an html list
+    Commlinks.on('updateIframeList', function (data, event) {
+        let item = document.createElement("li");
+        let textnode = document.createTextNode(data.text);
+        item.appendChild(textnode);
+
+        document.getElementById('messages').appendChild(item);
+    });
+
+    // Send a message to the main window
+    function sendMessage() {
+        let date = new Date();
+        Commlinks.mainWindow.send('updateMainWindowList', {
+            text: 'Received message from the iframe at '+ date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
+        })
+    }
+</script>
+</body>
+</html>
