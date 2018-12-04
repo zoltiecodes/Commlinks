@@ -14,9 +14,11 @@
     </style>
 </head>
 <body>
+
 <h1 class="text-center">JavaScript Commlinks Iframe Demo</h1>
 <p class="text-center">Easy communication between window instances in JavaScript.</p>
 <p class="text-center"><a href="https://github.com/zsoltgyure/Commlinks">View on Github</a></p>
+
 <div class="wrapper">
     <div>
         <p>Main Window</p>
@@ -46,7 +48,7 @@
         document.getElementById('messages').appendChild(item);
     });
 
-    // Send a message to the main window
+    // Send a message to the iframe
     function sendMessage() {
         let date = new Date();
         Commlinks.myIframe.send('updateIframeList', {
