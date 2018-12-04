@@ -2,7 +2,7 @@
   "name": "commlinks",
   "version": "0.0.2",
   "description": "Easy communication between window instances in JavaScript.",
-  "main": "index.js",
+  "main": "dist/commlinks.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
