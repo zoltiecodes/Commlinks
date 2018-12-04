@@ -5,12 +5,17 @@ You can also communicate between iframes and browser tabs too.
 [Online Demo](https://zsoltgyure.github.io/Commlinks/examples/iframe/)
 
 ## Installation
+##### Step 1
 ```
 npm i --save commlinks
 ```
 *If you do not want to add the package to your `package.json` file, 
 do not use the `--save` flag.*
-
+##### Step 2
+Include the commlinks JavaScript file in your project:
+```
+<script src="./node_modules/commlinks/dist/commlinks.min.js"></script>
+```
 ## Usage
 #### Creating a Commlink instance
 A global `Commlinks` object is available, you can register
