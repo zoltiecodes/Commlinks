@@ -1,6 +1,6 @@
 {
   "name": "commlinks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy communication between window instances in JavaScript.",
   "main": "dist/commlinks.js",
   "scripts": {
