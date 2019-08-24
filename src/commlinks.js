@@ -1,7 +1,10 @@
 function Commlink(win) {
 
-    // Check if win is an instance of the Window interface
-    if(typeof win.postMessage !== 'function')
+    if(typeof win === 'undefined')
+    {
+        win = window;
+    }
+    else if(typeof win.postMessage !== 'function')
     {
         console.error('Commlinks plugin: The first argument passed to the Commlink function must be a Window interface instance.')
         return;
